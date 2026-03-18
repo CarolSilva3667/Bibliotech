@@ -1,4 +1,4 @@
-# ibliotech
+# Bibliotech
 
 Repositório com materiais do projeto da bibliotech! (códigos, atividades e recursos utilizados)
 
