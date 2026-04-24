@@ -63,7 +63,4 @@ Em desenvolvimento
 - Ana Livia
 - Caroline V.
 - Isabela B.
-- Stefany
-- Caroline Vitória  
-- Isabela Beatriz  
-- Stefany  
+- Stefany 
