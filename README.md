@@ -37,10 +37,10 @@ A proposta envolve a criação de um sistema digital que permite:
 ---
 
 ##  Estrutura do Projeto
-/backend → API e lógica do sistema  
-/frontend → Interface do usuário  
-/bd → Banco de dados e DER  
-/docs → Documentação, protótipos e requisitos  
+backend → API e lógica do sistema  
+frontend → Interface do usuário  
+bd → Banco de dados e DER  
+docs → Documentação, protótipos e requisitos  
 
 ---
 
