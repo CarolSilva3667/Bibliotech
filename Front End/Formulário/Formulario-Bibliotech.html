@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Formulário Bibliotech</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Formulario do Aluno
+        </h1>
+    </center>
+    <form action=""method="">
+        <p>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome"placeholder="insira seu nome" required />
+        </p>
+        <p>
+            <label for="datanasc">Data de Nascimento:</label>
+            <input id="datanasc" type="date"/>
+        </p>
+        <p>
+            <label for="email">Email Escolar:</label>
+            <input id="email" type="email" placeholder="Insira seu email" required />
+        </p>
+        <p>
+            <label for="reg. da matricula">RM:</label>
+            <input id="reg. da matricula" type="reg. da matricula" placeholder="Insira seu RM" required />
+        </p>
+        <p>
+            <label for="serie">Turma/Série:</label>
+            <input id="serie" type="serie" placeholder="Insira sua serie" required />
+        </p>
+        <fieldset>
+            <legend>Gêneros Literários</legend>
+            <input type="radio" id="romance" name="genero literario" />
+            <label for="romance">Romance</label>
+            <br>
+            <input type="radio" id="misterio" name="genero literario" />
+            <label for="misterio">Mistério</label>
+            <br>
+            <input type="radio" id="fantasia" name="genero literario" />
+            <label for="fantasia">Fantasia</label>
+            <br>
+            <input type="radio" id="ficção científica" name="genero literario" />
+            <label for="ficção científica">Ficção Científica</label>
+            <br>
+            <input type="radio" id="suspense" name="genero literario" />
+            <label for="suspense">Suspense</label>
+            <br>
+            <input type="radio" id="autoajuda" name="genero literario" />
+            <label for="autoajuda">Autoajuda</label>
+            <br>
+            <input type="radio" id="outros" name="genero literario" />
+            <label for="outros">Outros</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Data do Emprestimo</legend>
+            <p>
+            <label for="data_emprestimo">Data do Empréstimo:</label>
+            <input type="date" id="data_emprestimo" placeholder="insira a data de emprestimo" required />
+        </p>
+        <p>
+            <label for="data_devolucao">Data da Devolução:</label>
+            <input type="date" id="data_devolucao" placeholder="insira a data da devolucao" required />
+        </p>
+        </fieldset>
+    </form>
+</body>
+</html>
