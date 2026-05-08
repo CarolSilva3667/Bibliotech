@@ -10,7 +10,7 @@ Repositório com materiais do projeto Bibliotech!
 
 -  Site Corporativo (Canva): [Acessar](https://www.canva.com/design/DAGnWq94ewA/PUNnHMnsk58Qv2OKhJaKHQ/edit?utm_content=DAGnWq94ewA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
--  Apresentação (Canva): [Acessar](https://www.canva.com/design/DAGxehZOYt4/RleFOf-q0y1xcJzIlYAsQg/edit?utm_content=DAGxehZOYt4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+-  Apresentação (Canva): [Acessar](https://www.canva.com/design/DAGp5H9qYeU/5z7q4qZk2nBZe3MmupE0Lw/edit)
 
 -  Figma (Design do App): [Acessar](https://www.figma.com/design/TdoFedAwDGq8RVO3ZKFKps/Aplicativo-Bibliotech?node-id=0-1&p=f&t=PYCN7Thx10mqhlRL-0)
 
