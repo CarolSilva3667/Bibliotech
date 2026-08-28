@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    
+<meta charset="UTF-8">
+
+<title>Login - Biblioteca Virtual</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Biblioteca Virtual 📚</h1>
+
+
+</header>
+
+<section class="login-container">
+
+<div class="login-box">
+
+    <h2>Entrar</h2>
+
+    <p>Acesse sua conta</p>
+
+
+    <form id="loginForm">
+
+        <label for="usuario">
+            Usuário
+        </label>
+
+        <input
+            type="text"
+            id="usuario"
+            placeholder="Digite seu usuário"
+            required
+        >
+
+
+        <label for="senha">
+            Senha
+        </label>
+
+        <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha"
+            required
+        >
+
+
+        <label for="tipoUsuario">
+            Tipo de acesso
+        </label>
+
+        <select id="tipoUsuario" required>
+
+            <option value="aluno">
+                Aluno
+            </option>
+
+            <option value="bibliotecario">
+                Bibliotecário
+            </option>
+
+        </select>
+
+
+        <button type="submit">
+            Entrar
+        </button>
+
+    </form>
+
+</div>
+
+
+</section>
+
+<script>
+
+document
+    .getElementById("loginForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const usuario =
+            document.getElementById("usuario").value.trim();
+
+        const senha =
+            document.getElementById("senha").value;
+
+        const tipo =
+            document.getElementById("tipoUsuario").value;
+
+        if (tipo === "bibliotecario") {
+
+            if (
+                usuario === "bibliotecario" &&
+                senha === "1234"
+            ) {
+
+                localStorage.setItem(
+                    "usuario",
+                    usuario
+                );
+
+                localStorage.setItem(
+                    "tipoUsuario",
+                    "bibliotecario"
+                );
+
+
+                window.location.href =
+                    "bibliotecario.html";
+
+            } else {
+
+                alert(
+                    "Usuário ou senha do bibliotecário incorretos."
+                );
+
+            }
+
+            return;
+
+        }
+
+        if (tipo === "aluno") {
+
+            localStorage.setItem(
+                "usuario",
+                usuario
+            );
+
+            localStorage.setItem(
+                "tipoUsuario",
+                "aluno"
+            );
+
+
+            window.location.href =
+                "index.html";
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>

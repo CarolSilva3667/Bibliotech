@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #120005;
+    color: white;
+}
+
+header {
+    background: #3c0315;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px #000;
+}
+
+header h1 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d86b8b;
+}
+
+section {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 30px;
+    background: #4a0404b8;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px #000;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    width: 245px;
+    padding: 18px;
+    background: #880024;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px #000;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 180px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin-top: 10px;
+}
+
+.card button,
+.acoes button,
+.login-box button {
+    background: #3c0315;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card button:hover,
+.acoes button:hover,
+.login-box button:hover {
+    background: #d86b8b;
+}
+
+.pesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.pesquisa input {
+    width: 450px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.pesquisa button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #880024;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pesquisa button:hover {
+    background: #d86b8b;
+}
+
+.card.emprestado {
+    opacity: 0.55;
+    position: relative;
+    background: #5a4b4b;
+}
+
+.card.emprestado:hover {
+    transform: none;
+}
+
+.card.emprestado img {
+    filter: grayscale(70%);
+}
+
+.card.emprestado button {
+    display: none;
+}
+
+.status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #555;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.emprestimos {
+    width: 90%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #3c0315;
+    color: white;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #eee;
+}
+
+.ok {
+    color: green;
+    font-weight: bold;
+}
+
+.atrasado {
+    color: red;
+    font-weight: bold;
+}
+
+.btn-devolvido {
+    background: #3c0315;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-devolvido:hover {
+    background: #d86b8b;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-box {
+    width: 400px;
+    background: white;
+    color: #333;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px #000;
+}
+
+.login-box label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.login-box input,
+.login-box select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.login-box button {
+    width: 100%;
+}
+
+.dashboard,
+.acoes {
+    width: 90%;
+}
+
+.dashboard .card,
+.acoes .card {
+    background: white;
+    color: #333;
+}
+
+.dashboard h1 {
+    color: #880024;
+    font-size: 40px;
+}
+
+#contato {
+    text-align: center;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contato-btn {
+    background: #880024;
+    color: white;
+    text-decoration: none;
+    padding: 25px 40px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.contato-btn:hover {
+    background: #d86b8b;
+}
+
+.inicio .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.inicio img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#generos .card {
+    width: 245px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#generos .card h3,
+#generos .card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#generos .card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+#generos .card button {
+    margin-top: auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    nav ul li {
+        display: block;
+        margin: 10px;
+    }
+
+    section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+    }
+
+    .pesquisa input {
+        width: 90%;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .inicio .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inicio img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .emprestimos {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    .login-box {
+        width: 90%;
+    }
+
+}

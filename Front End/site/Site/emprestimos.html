@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Controle de Empréstimos - Biblioteca Virtual</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Biblioteca Virtual 📚</h1>
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="destaques.html">Destaques</a>
+        </li>
+
+        <li>
+            <a href="generos.html">Gêneros</a>
+        </li>
+
+        <li>
+            <a href="catalogo.html">Catálogo</a>
+        </li>
+
+        <li>
+            <a href="carrinho.html">Meus Livros</a>
+        </li>
+
+        <li>
+            <a href="emprestimos.html">Empréstimos</a>
+        </li>
+
+        <li>
+            <a href="eventos.html">Eventos</a>
+        </li>
+
+        <li>
+            <a href="contato.html">Contato</a>
+        </li>
+
+        <li>
+            <a href="bibliotecario.html">Painel do Bibliotecário</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+</header>
+
+<section class="emprestimos">
+
+
+<h2>Controle de Empréstimos</h2>
+
+<table>
+
+    <thead>
+
+        <tr>
+
+            <th>Aluno</th>
+
+            <th>Livro</th>
+
+            <th>Empréstimo</th>
+
+            <th>Devolução</th>
+
+            <th>Status</th>
+
+            <th>Ação</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="listaEmprestimos">
+
+    </tbody>
+
+</table>
+
+
+</section>
+
+<script src="script.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tipo = localStorage.getItem("tipoUsuario");
+
+    if (tipo !== "bibliotecario") {
+
+        alert("Acesso permitido apenas para bibliotecários.");
+
+        window.location.href = "login.html";
+
+        return;
+
+    }
+
+    const livros = pegarLivrosEmprestados();
+
+    const tabela =
+        document.getElementById("listaEmprestimos");
+
+
+    if (livros.length === 0) {
+
+        tabela.innerHTML = `
+
+            <tr>
+
+                <td colspan="6">
+
+                    Nenhum livro emprestado no momento.
+
+                </td>
+
+            </tr>
+
+        `;
+
+        return;
+
+    }
+
+
+    livros.forEach(function (livro) {
+
+        const linha =
+            document.createElement("tr");
+
+
+        linha.innerHTML = `
+
+            <td>
+                ${livro.aluno}
+            </td>
+
+            <td>
+                ${livro.livro}
+            </td>
+
+            <td>
+                ${livro.dataEmprestimo}
+            </td>
+
+            <td>
+                ${livro.dataDevolucao}
+            </td>
+
+            <td class="ok">
+                📖 Emprestado
+            </td>
+
+            <td>
+
+                <button
+                    onclick="devolverLivro(${livro.id})"
+                >
+                    Devolvido
+                </button>
+
+            </td>
+
+        `;
+
+
+        tabela.appendChild(linha);
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>

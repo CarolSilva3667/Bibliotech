@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gêneros - Biblioteca Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>Biblioteca Virtual 📚</h1>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destaques.html">Destaques</a></li>
+        <li><a href="generos.html">Gêneros</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrinho.html">Meus Livros</a></li>
+
+        <li class="somente-bibliotecario">
+            <a href="emprestimos.html">Empréstimos</a>
+        </li>
+
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Login</a></li>
+
+        <li class="somente-bibliotecario">
+            <a href="bibliotecario.html">Painel do Bibliotecário</a>
+        </li>
+    </ul>
+</nav>
+
+</header>
+
+<section id="generos">
+
+<div class="container">
+
+    <h2>Gêneros Literários</h2>
+
+    <div class="cards">
+
+        <div class="card card-genero"
+            onclick="window.location.href='catalogo.html?genero=suspense'">
+
+            <h3>Suspense</h3>
+
+            <p>
+                Histórias cheias de mistério, tensão e reviravoltas.
+            </p>
+
+            <button type="button">
+                Ver livros
+            </button>
+
+        </div>
+
+
+        <div class="card card-genero"
+            onclick="window.location.href='catalogo.html?genero=dark-romance'">
+
+            <h3>Dark Romance</h3>
+
+            <p>
+                Romances intensos com histórias sombrias e complexas.
+            </p>
+
+            <button type="button">
+                Ver livros
+            </button>
+
+        </div>
+
+
+        <div class="card card-genero"
+            onclick="window.location.href='catalogo.html?genero=romance'">
+
+            <h3>Romance</h3>
+
+            <p>
+                Histórias sobre amor, relacionamentos e sentimentos.
+            </p>
+
+            <button type="button">
+                Ver livros
+            </button>
+
+        </div>
+
+
+        <div class="card card-genero"
+            onclick="window.location.href='catalogo.html?genero=fantasia'">
+
+            <h3>Fantasia</h3>
+
+            <p>
+                Mundos mágicos, criaturas fantásticas e aventuras.
+            </p>
+
+            <button type="button">
+                Ver livros
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

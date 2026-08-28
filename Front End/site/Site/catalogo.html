@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Biblioteca Virtual</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Biblioteca Virtual 📚</h1>
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="destaques.html">Destaques</a>
+        </li>
+
+        <li>
+            <a href="generos.html">Gêneros</a>
+        </li>
+
+        <li>
+            <a href="catalogo.html">Catálogo</a>
+        </li>
+
+        <li>
+            <a href="carrinho.html">Meus Livros</a>
+        </li>
+
+        <li class="somente-bibliotecario">
+            <a href="emprestimos.html">Empréstimos</a>
+        </li>
+
+        <li>
+            <a href="eventos.html">Eventos</a>
+        </li>
+
+        <li>
+            <a href="contato.html">Contato</a>
+        </li>
+
+        <li>
+            <a href="login.html">Login</a>
+        </li>
+
+        <li class="somente-bibliotecario">
+
+            <a href="bibliotecario.html">
+                Painel do Bibliotecário
+            </a>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<section id="catalogo">
+<div class="container">
+
+    <h2>Catálogo de Livros</h2>
+
+
+    <div class="pesquisa">
+
+        <input
+            type="text"
+            id="campoBusca"
+            placeholder="Buscar livro, autor ou gênero..."
+        >
+
+        <button type="button">
+            🔍 Buscar
+        </button>
+
+    </div>
+
+
+    <div class="cards" id="listaLivros">
+
+
+        <div class="card" data-id="1" data-genero="fantasia">
+
+            <img src="./assets/Livro 1.jpg">
+
+            <h3>Assistente do Vilão</h3>
+
+            <p>
+                Evie Sage se torna assistente do temido Vilão.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="2" data-genero="fantasia">
+
+            <img src="./assets/Livro 2.jpg">
+
+            <h3>Aprendiz do Vilão</h3>
+
+            <p>
+                Evie precisa proteger o reino.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="3" data-genero="fantasia">
+
+            <img src="./assets/Livro 6.jpg">
+
+            <h3>Aliada do Vilão</h3>
+
+            <p>
+                Novos desafios aguardam Evie.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="4" data-genero="fantasia">
+
+            <img src="./assets/Livro 3.jpg">
+
+            <h3>Quarta Asa</h3>
+
+            <p>
+                Violet entra na academia de dragões.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="5" data-genero="fantasia">
+
+            <img src="./assets/Livro 5.jpg">
+
+            <h3>Chama de Ferro</h3>
+
+            <p>
+                Segredos do instituto são revelados.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="6" data-genero="fantasia">
+
+            <img src="./assets/Livro 7.jpg">
+
+            <h3>Tempestade de Ônix</h3>
+
+            <p>
+                Violet busca aliados fora de Navarre.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+        <div class="card" data-id="7" data-genero="suspense">
+
+            <img src="./assets/Livro 4.jpg">
+
+            <h3>A Paciente Silenciosa</h3>
+
+            <p>
+                Um crime muda completamente uma família.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+        <div class="card" data-id="8" data-genero="romance">
+
+            <img src="./assets/Livro 8.jpg">
+
+            <h3>O Fabricante de Lágrimas</h3>
+
+            <p>
+                Dois jovens descobrem sentimentos inesperados.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+        <div class="card" data-id="9" data-genero="suspense">
+
+            <img src="./assets/Livro 9.jpg">
+
+            <h3>Como Matei Minha Querida Família</h3>
+
+            <p>
+                Uma jovem busca vingança.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+        <div class="card" data-id="10" data-genero="romance">
+
+            <img src="./assets/Livro 10.jpg">
+
+            <h3>Quebrando o Gelo</h3>
+
+            <p>
+                Um romance entre atletas.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+        <div class="card" data-id="11" data-genero="suspense">
+
+            <img src="./assets/Livro 11.jpg">
+
+            <h3>Academia dos Casos Arquivados</h3>
+
+            <p>
+                Jovens ajudam o FBI a resolver crimes antigos.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="12" data-genero="suspense">
+
+            <img src="./assets/Livro 12.jpg">
+
+            <h3>Instinto Assassino</h3>
+
+            <p>
+                Um assassino copia crimes antigos.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="13" data-genero="suspense">
+
+            <img src="./assets/Livro 13.jpg">
+
+            <h3>Tudo ou Nada</h3>
+
+            <p>
+                Os Naturais enfrentam novos perigos.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="14" data-genero="suspense">
+
+            <img src="./assets/Livro 14.jpg">
+
+            <h3>Conflitos de Sangue</h3>
+
+            <p>
+                Segredos do passado vêm à tona.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+        <div class="card" data-id="15" data-genero="romance">
+
+            <img src="./assets/Livro 15.jpg">
+
+            <h3>A Cinco Passos de Você</h3>
+
+            <p>
+                Dois jovens vivem um amor impossível.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+        <div class="card" data-id="16" data-genero="suspense">
+
+            <img src="./assets/Livro 16.jpg">
+
+            <h3>Casamento Perfeito</h3>
+
+            <p>
+                Uma advogada defende seu marido acusado.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="17" data-genero="suspense">
+
+            <img src="./assets/Livro 17.jpg">
+
+            <h3>O Jardim das Borboletas</h3>
+
+            <p>
+                Uma jovem revela segredos de um cativeiro.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="18" data-genero="suspense">
+
+            <img src="./assets/Livro 18.jpg">
+
+            <h3>Boas Garotas se Afogam em Silêncio</h3>
+
+            <p>
+                Uma investigação revela segredos da escola.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="19" data-genero="suspense">
+
+            <img src="./assets/Livro 19.jpg">
+
+            <h3>Ninguém Vai te Ouvir Gritar</h3>
+
+            <p>
+                Uma jovem tenta desvendar um desaparecimento.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+        <div class="card" data-id="20" data-genero="suspense">
+
+            <img src="./assets/Livro 20.jpg">
+
+            <h3>Garotos Mortos Não Sangram</h3>
+
+            <p>
+                Adolescentes envolvidos em um mistério sombrio.
+            </p>
+
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tipoUsuario =
+        localStorage.getItem("tipoUsuario");
+
+    const linksBibliotecario =
+        document.querySelectorAll(
+            ".somente-bibliotecario"
+        );
+
+
+    linksBibliotecario.forEach(function (link) {
+
+        if (tipoUsuario !== "bibliotecario") {
+            link.style.display = "none";
+        }
+
+    });
+
+
+    function pegarEmprestimos() {
+
+        return JSON.parse(
+            localStorage.getItem("livrosEmprestados") || "[]"
+        );
+
+    }
+
+
+    function salvarEmprestimos(emprestimos) {
+
+        localStorage.setItem(
+            "livrosEmprestados",
+            JSON.stringify(emprestimos)
+        );
+
+    }
+
+
+    function cadastrarEmprestimosIniciais() {
+
+        let emprestimos =
+            pegarEmprestimos();
+
+
+        const livrosIniciais = [
+
+            {
+                id: 5,
+                livro: "Chama de Ferro",
+                aluno: "Maria Oliveira",
+                dataEmprestimo: "08/08/2026",
+                dataDevolucao: "22/08/2026"
+            },
+
+            {
+                id: 7,
+                livro: "A Paciente Silenciosa",
+                aluno: "Ana Costa",
+                dataEmprestimo: "20/07/2026",
+                dataDevolucao: "03/08/2026"
+            },
+
+            {
+                id: 14,
+                livro: "Conflitos de Sangue",
+                aluno: "Pedro Lima",
+                dataEmprestimo: "16/08/2026",
+                dataDevolucao: "30/08/2026"
+            },
+
+            {
+                id: 16,
+                livro: "Casamento Perfeito",
+                aluno: "João Silva",
+                dataEmprestimo: "08/08/2026",
+                dataDevolucao: "22/08/2026"
+            }
+
+        ];
+
+
+        livrosIniciais.forEach(function (livroInicial) {
+
+            const existe =
+                emprestimos.some(function (emprestimo) {
+
+                    return Number(emprestimo.id) ===
+                        Number(livroInicial.id);
+
+                });
+
+
+            if (!existe) {
+
+                emprestimos.push({
+
+                    id: livroInicial.id,
+
+                    livro: livroInicial.livro,
+
+                    aluno: livroInicial.aluno,
+
+                    dataEmprestimo:
+                        livroInicial.dataEmprestimo,
+
+                    dataDevolucao:
+                        livroInicial.dataDevolucao,
+
+                    status: "Emprestado"
+
+                });
+
+            }
+
+        });
+
+
+        salvarEmprestimos(emprestimos);
+
+    }
+
+
+    function deixarEmprestado(card) {
+
+        card.classList.add("emprestado");
+
+
+        const botao =
+            card.querySelector(".btn-emprestar");
+
+
+        if (botao) {
+            botao.style.display = "none";
+        }
+
+
+        const status =
+            card.querySelector(".status-livro");
+
+
+        if (status) {
+
+            status.innerHTML =
+                "<strong>Status:</strong> 🔴 Emprestado";
+
+        }
+
+
+        let etiqueta =
+            card.querySelector(".status");
+
+
+        if (!etiqueta) {
+
+            etiqueta =
+                document.createElement("span");
+
+            etiqueta.className = "status";
+
+            etiqueta.innerText =
+                "EMPRESTADO";
+
+            card.prepend(etiqueta);
+
+        }
+
+    }
+
+
+    function deixarDisponivel(card) {
+
+        card.classList.remove("emprestado");
+
+
+        const etiqueta =
+            card.querySelector(".status");
+
+
+        if (etiqueta) {
+            etiqueta.remove();
+        }
+
+
+        const botao =
+            card.querySelector(".btn-emprestar");
+
+
+        if (botao) {
+            botao.style.display = "";
+        }
+
+
+        const status =
+            card.querySelector(".status-livro");
+
+
+        if (status) {
+
+            status.innerHTML =
+                "<strong>Status:</strong> 🟢 Disponível";
+
+        }
+
+    }
+
+
+    function configurarLivros() {
+
+        const emprestimos =
+            pegarEmprestimos();
+
+
+        const cards =
+            document.querySelectorAll(
+                "#listaLivros .card"
+            );
+
+
+        cards.forEach(function (card) {
+
+            const id =
+                Number(card.dataset.id);
+
+
+            const titulo =
+                card.querySelector("h3").innerText.trim();
+
+
+            const botao =
+                card.querySelector(".btn-emprestar");
+
+
+            const emprestimo =
+                emprestimos.find(function (item) {
+
+                    return Number(item.id) === id;
+
+                });
+
+
+            if (emprestimo) {
+
+                deixarEmprestado(card);
+
+            } else {
+
+                deixarDisponivel(card);
+
+
+                if (botao) {
+
+                    botao.onclick = function () {
+
+                        const usuario =
+                            localStorage.getItem("usuario");
+
+
+                        const tipo =
+                            localStorage.getItem("tipoUsuario");
+
+
+                        if (!usuario) {
+
+                            alert(
+                                "Você precisa fazer login para emprestar um livro."
+                            );
+
+                            window.location.href =
+                                "login.html";
+
+                            return;
+
+                        }
+
+
+                        if (tipo !== "aluno") {
+
+                            alert(
+                                "Apenas alunos podem realizar empréstimos."
+                            );
+
+                            return;
+
+                        }
+
+
+                        let lista =
+                            pegarEmprestimos();
+
+
+                        const jaExiste =
+                            lista.some(function (item) {
+
+                                return Number(item.id) === id;
+
+                            });
+
+
+                        if (jaExiste) {
+
+                            alert(
+                                "Este livro acabou de ser emprestado."
+                            );
+
+                            configurarLivros();
+
+                            return;
+
+                        }
+
+
+                        const hoje =
+                            new Date();
+
+
+                        const devolucao =
+                            new Date();
+
+
+                        devolucao.setDate(
+                            devolucao.getDate() + 14
+                        );
+
+
+                        const novoEmprestimo = {
+
+                            id: id,
+
+                            livro: titulo,
+
+                            aluno: usuario,
+
+                            dataEmprestimo:
+                                hoje.toLocaleDateString("pt-BR"),
+
+                            dataDevolucao:
+                                devolucao.toLocaleDateString("pt-BR"),
+
+                            status: "Emprestado"
+
+                        };
+
+
+                        lista.push(
+                            novoEmprestimo
+                        );
+
+
+                        salvarEmprestimos(
+                            lista
+                        );
+
+
+                        alert(
+                            "Livro emprestado com sucesso! 📚"
+                        );
+
+
+                        configurarLivros();
+
+                    };
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    cadastrarEmprestimosIniciais();
+
+    configurarLivros();
+
+
+    const busca =
+        document.getElementById("campoBusca");
+
+
+    const cards =
+        document.querySelectorAll(
+            "#listaLivros .card"
+        );
+
+    const parametroGenero =
+        new URLSearchParams(
+            window.location.search
+        ).get("genero");
+
+
+    const tituloCatalogo =
+        document.querySelector("#catalogo h2");
+
+
+    if (parametroGenero) {
+
+        const nomesGeneros = {
+
+            "romance": "Romance",
+
+            "dark-romance": "Dark Romance",
+
+            "fantasia": "Fantasia",
+
+            "suspense": "Suspense"
+
+        };
+
+
+        if (nomesGeneros[parametroGenero]) {
+
+            tituloCatalogo.innerText =
+                "Catálogo - " +
+                nomesGeneros[parametroGenero];
+
+        }
+
+
+        cards.forEach(function (card) {
+
+            const generoLivro =
+                card.dataset.genero;
+
+
+            if (
+                generoLivro === parametroGenero
+            ) {
+
+                card.style.display = "";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+    busca.addEventListener(
+        "keyup",
+        function () {
+
+            const valor =
+                busca.value.toLowerCase();
+
+
+            cards.forEach(function (card) {
+
+                const texto =
+                    card.innerText.toLowerCase();
+
+
+                const generoLivro =
+                    card.dataset.genero;
+
+
+                const combinaBusca =
+                    texto.includes(valor);
+
+
+                const combinaGenero =
+                    !parametroGenero ||
+                    generoLivro === parametroGenero;
+
+
+                if (
+                    combinaBusca &&
+                    combinaGenero
+                ) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        }
+    );
+
+});
+
+</script>
+
+</body>
+
+</html>
+

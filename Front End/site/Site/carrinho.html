@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Meus Livros - Biblioteca Virtual</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Biblioteca Virtual 📚</h1>
+
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="destaques.html">Destaques</a>
+        </li>
+
+        <li>
+            <a href="generos.html">Gêneros</a>
+        </li>
+
+        <li>
+            <a href="catalogo.html">Catálogo</a>
+        </li>
+
+        <li>
+            <a href="carrinho.html">Meus Livros</a>
+        </li>
+
+        <li class="somente-bibliotecario">
+            <a href="emprestimos.html">Empréstimos</a>
+        </li>
+
+        <li>
+            <a href="eventos.html">Eventos</a>
+        </li>
+
+        <li>
+            <a href="contato.html">Contato</a>
+        </li>
+
+        <li>
+            <a href="login.html">Login</a>
+        </li>
+
+        <li class="somente-bibliotecario">
+            <a href="bibliotecario.html">
+                Painel do Bibliotecário
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+</header>
+
+<section class="meus-livros">
+
+
+<div class="container">
+
+    <h2>📖 Meus Livros</h2>
+
+    <p>
+        Confira os livros que estão emprestados em seu nome.
+    </p>
+
+
+    <div id="meusLivros" class="cards">
+
+    </div>
+
+</div>
+
+
+</section>
+
+<script src="script.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const usuario =
+        localStorage.getItem("usuario");
+
+    const tipoUsuario =
+        localStorage.getItem("tipoUsuario");
+
+
+    const container =
+        document.getElementById("meusLivros");
+
+
+    if (!usuario) {
+
+        container.innerHTML = `
+
+            <div class="card">
+
+                <h3>🔒 Faça login</h3>
+
+                <p>
+                    Você precisa estar logado para
+                    visualizar seus livros.
+                </p>
+
+                <a href="login.html">
+
+                    <button>
+                        Fazer Login
+                    </button>
+
+                </a>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+    const livros =
+        pegarLivrosEmprestados();
+
+    const meusLivros =
+        livros.filter(function (livro) {
+
+            return livro.aluno === usuario;
+
+        });
+
+
+    if (meusLivros.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="card">
+
+                <h3>📚 Nenhum livro emprestado</h3>
+
+                <p>
+                    Você ainda não possui livros
+                    emprestados.
+                </p>
+
+                <a href="catalogo.html">
+
+                    <button>
+                        Ver Catálogo
+                    </button>
+
+                </a>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+    meusLivros.forEach(function (livro) {
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "card emprestado";
+
+
+        card.innerHTML = `
+
+            <span class="status">
+                EMPRESTADO
+            </span>
+
+
+            <h3>
+                📖 ${livro.livro}
+            </h3>
+
+
+            <p>
+                <strong>
+                    Data do empréstimo:
+                </strong>
+
+                ${livro.dataEmprestimo}
+            </p>
+
+
+            <p>
+                <strong>
+                    Data de devolução:
+                </strong>
+
+                ${livro.dataDevolucao}
+            </p>
+
+
+            <p>
+                <strong>
+                    Status:
+                </strong>
+
+                🔴 Emprestado
+            </p>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
