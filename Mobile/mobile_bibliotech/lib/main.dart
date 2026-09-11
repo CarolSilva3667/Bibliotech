@@ -21,8 +21,9 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Biblioteca Virtual',
-      home: const HomePage(),
+      home: const LoginPage(),
       routes: {
+        '/home': (context) => const HomePage(),
         '/catalogo': (context) => const CatalogoPage(),
         '/meus-livros': (context) => const MeusLivrosPage(),
         '/eventos': (context) => const EventosPage(),

@@ -20,7 +20,26 @@ class _MeusLivrosPageState extends State<MeusLivrosPage> {
         foregroundColor: Colors.white,
         title: const Text('Meus Livros'),
         centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/home');
+          },
+        ),
+        actions: [
+          Builder(
+            builder: (context) {
+              return IconButton(
+                icon: const Icon(Icons.menu),
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
+              );
+            },
+          ),
+        ],
       ),
+      drawer: _menu(context),
       body: livros.isEmpty
           ? const Center(
               child: Text(
@@ -106,6 +125,78 @@ class _MeusLivrosPageState extends State<MeusLivrosPage> {
                 );
               },
             ),
+    );
+  }
+
+  Widget _menu(BuildContext context) {
+    return Drawer(
+      backgroundColor: const Color(0xFF120005),
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          DrawerHeader(
+            decoration: const BoxDecoration(
+              color: Color(0xFF3C0315),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ClipOval(
+                  child: Image.asset(
+                    'assets/logo.jpg',
+                    width: 80,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Biblioteca Virtual 📚',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          _itemMenu(context, Icons.home, 'Início', '/home'),
+          _itemMenu(context, Icons.menu_book, 'Catálogo', '/catalogo'),
+          _itemMenu(context, Icons.book, 'Meus Livros', '/meus-livros'),
+          _itemMenu(context, Icons.star, 'Destaques', '/destaques'),
+          _itemMenu(context, Icons.category, 'Gêneros', '/generos'),
+          _itemMenu(context, Icons.event, 'Eventos', '/eventos'),
+          _itemMenu(context, Icons.contact_page, 'Contato', '/contato'),
+          const Divider(color: Colors.white30),
+          _itemMenu(context, Icons.login, 'Login', '/login'),
+        ],
+      ),
+    );
+  }
+
+  Widget _itemMenu(
+    BuildContext context,
+    IconData icone,
+    String titulo,
+    String rota,
+  ) {
+    return ListTile(
+      leading: Icon(
+        icone,
+        color: Colors.white,
+      ),
+      title: Text(
+        titulo,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+        ),
+      ),
+      onTap: () {
+        Navigator.pop(context);
+        Navigator.pushReplacementNamed(context, rota);
+      },
     );
   }
 }

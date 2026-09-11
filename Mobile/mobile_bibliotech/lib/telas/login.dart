@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
     if (rotaAnterior != null && rotaAnterior.isNotEmpty) {
       Navigator.pushReplacementNamed(context, rotaAnterior);
     } else {
-      Navigator.pushReplacementNamed(context, '/');
+      Navigator.pushReplacementNamed(context, '/home');
     }
   }
 

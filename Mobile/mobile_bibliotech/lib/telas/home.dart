@@ -15,11 +15,96 @@ class HomePage extends StatelessWidget {
           'Biblioteca Virtual 📚',
         ),
       ),
+      drawer: Drawer(
+        backgroundColor: const Color(0xFF120005),
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(
+                color: Color(0xFF3C0315),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ClipOval(
+                    child: Image.asset(
+                      'assets/logo.jpg',
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Biblioteca Virtual 📚',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            _itemMenu(
+              context,
+              Icons.home,
+              'Início',
+              '/home',
+            ),
+            _itemMenu(
+              context,
+              Icons.menu_book,
+              'Catálogo',
+              '/catalogo',
+            ),
+            _itemMenu(
+              context,
+              Icons.book,
+              'Meus Livros',
+              '/meus-livros',
+            ),
+            _itemMenu(
+              context,
+              Icons.star,
+              'Destaques',
+              '/destaques',
+            ),
+            _itemMenu(
+              context,
+              Icons.category,
+              'Gêneros',
+              '/generos',
+            ),
+            _itemMenu(
+              context,
+              Icons.event,
+              'Eventos',
+              '/eventos',
+            ),
+            _itemMenu(
+              context,
+              Icons.contact_page,
+              'Contato',
+              '/contato',
+            ),
+            const Divider(
+              color: Colors.white30,
+            ),
+            _itemMenu(
+              context,
+              Icons.login,
+              'Login',
+              '/login',
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(height: 25),
-
             Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -32,9 +117,7 @@ class HomePage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-
                   const SizedBox(height: 25),
-
                   const Text(
                     'Bem-vindo à Biblioteca Virtual 📖',
                     textAlign: TextAlign.center,
@@ -44,9 +127,7 @@ class HomePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
                   const SizedBox(height: 20),
-
                   const Text(
                     'Nossa biblioteca nasceu com o objetivo de unir tecnologia e literatura, criando uma experiência moderna, simples e acessível para todos os leitores.',
                     textAlign: TextAlign.center,
@@ -56,9 +137,7 @@ class HomePage extends StatelessWidget {
                       height: 1.5,
                     ),
                   ),
-
                   const SizedBox(height: 15),
-
                   const Text(
                     'Aqui você pode consultar livros disponíveis, acompanhar seus empréstimos, participar de eventos literários e descobrir novas histórias.',
                     textAlign: TextAlign.center,
@@ -71,7 +150,6 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-
             Container(
               width: double.infinity,
               margin: const EdgeInsets.all(20),
@@ -90,9 +168,7 @@ class HomePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
                   const SizedBox(height: 15),
-
                   const Text(
                     'A Biblioteca Virtual é uma plataforma criada para facilitar o acesso ao conhecimento, permitindo que alunos e leitores encontrem livros de diferentes gêneros, acompanhem seus empréstimos e tenham uma experiência organizada e eficiente.',
                     textAlign: TextAlign.center,
@@ -102,9 +178,7 @@ class HomePage extends StatelessWidget {
                       height: 1.5,
                     ),
                   ),
-
                   const SizedBox(height: 15),
-
                   const Text(
                     'Nosso objetivo é preservar a essência das bibliotecas tradicionais, utilizando a tecnologia como ferramenta para aproximar pessoas da leitura.',
                     textAlign: TextAlign.center,
@@ -117,46 +191,6 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-
-            const Text(
-              'Acesse rapidamente',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-
-            const SizedBox(height: 20),
-
-            _botao(
-              context,
-              '📚 Catálogo',
-              'Veja todos os livros disponíveis na biblioteca.',
-              '/catalogo',
-            ),
-
-            _botao(
-              context,
-              '📖 Meus Livros',
-              'Confira os livros que estão emprestados em seu nome.',
-              '/meus-livros',
-            ),
-
-            _botao(
-              context,
-              '📅 Eventos',
-              'Confira os eventos da biblioteca.',
-              '/eventos',
-            ),
-
-            _botao(
-              context,
-              '👤 Login',
-              'Entre para acessar sua conta.',
-              '/login',
-            ),
-
             const SizedBox(height: 30),
           ],
         ),
@@ -164,70 +198,31 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _botao(
+  Widget _itemMenu(
     BuildContext context,
+    IconData icone,
     String titulo,
-    String descricao,
     String rota,
   ) {
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 8,
-      ),
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
+    return ListTile(
+      leading: Icon(
+        icone,
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black,
-            blurRadius: 8,
-            offset: Offset(0, 4),
-          ),
-        ],
       ),
-      child: Column(
-        children: [
-          Text(
-            titulo,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Color(0xFF880024),
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-
-          const SizedBox(height: 10),
-
-          Text(
-            descricao,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.black87,
-              fontSize: 14,
-            ),
-          ),
-
-          const SizedBox(height: 12),
-
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(
-                context,
-                rota,
-              );
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF3C0315),
-              foregroundColor: Colors.white,
-            ),
-            child: const Text('Acessar'),
-          ),
-        ],
+      title: Text(
+        titulo,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 16,
+        ),
       ),
+      onTap: () {
+        Navigator.pop(context);
+        Navigator.pushReplacementNamed(
+          context,
+          rota,
+        );
+      },
     );
   }
 }
