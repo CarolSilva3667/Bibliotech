@@ -85,77 +85,20 @@
 
 </section>
 
-<script>
 
+<script src="script.js"></script>
+
+<script>
 document
     .getElementById("loginForm")
     .addEventListener("submit", function(event) {
-
         event.preventDefault();
 
+        const nome = document.getElementById("usuario").value.trim();
+        const senha = document.getElementById("senha").value;
 
-        const usuario =
-            document.getElementById("usuario").value.trim();
-
-        const senha =
-            document.getElementById("senha").value;
-
-        const tipo =
-            document.getElementById("tipoUsuario").value;
-
-        if (tipo === "bibliotecario") {
-
-            if (
-                usuario === "bibliotecario" &&
-                senha === "1234"
-            ) {
-
-                localStorage.setItem(
-                    "usuario",
-                    usuario
-                );
-
-                localStorage.setItem(
-                    "tipoUsuario",
-                    "bibliotecario"
-                );
-
-
-                window.location.href =
-                    "bibliotecario.html";
-
-            } else {
-
-                alert(
-                    "Usuário ou senha do bibliotecário incorretos."
-                );
-
-            }
-
-            return;
-
-        }
-
-        if (tipo === "aluno") {
-
-            localStorage.setItem(
-                "usuario",
-                usuario
-            );
-
-            localStorage.setItem(
-                "tipoUsuario",
-                "aluno"
-            );
-
-
-            window.location.href =
-                "index.html";
-
-        }
-
+        realizarLogin(nome, senha);
     });
-
 </script>
 
 </body>
