@@ -104,95 +104,72 @@
 <script src="script.js"></script>
 
 <script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", async function () {
     const tipo = localStorage.getItem("tipoUsuario");
 
     if (tipo !== "bibliotecario") {
-
         alert("Acesso permitido apenas para bibliotecários.");
-
         window.location.href = "login.html";
-
         return;
-
     }
 
-    const livros = pegarLivrosEmprestados();
+    const tabela = document.getElementById("listaEmprestimos");
 
-    const tabela =
-        document.getElementById("listaEmprestimos");
+    try {
+        const resposta = await fetch("http://localhost:3000/emprestimos");
 
+        if (!resposta.ok) {
+            throw new Error("Erro ao buscar empréstimos.");
+        }
 
-    if (livros.length === 0) {
+        const emprestimos = (await resposta.json()).filter(
+            emprestimo => emprestimo.status === "Emprestado"
+        );
+
+        if (emprestimos.length === 0) {
+            tabela.innerHTML = `
+                <tr>
+                    <td colspan="6">
+                        Nenhum livro emprestado no momento.
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+
+        emprestimos.forEach(function (emprestimo) {
+            const linha = document.createElement("tr");
+
+            linha.innerHTML = `
+                <td>${emprestimo.aluno}</td>
+                <td>${emprestimo.livro}</td>
+                <td>${emprestimo.dataEmprestimo}</td>
+                <td>${emprestimo.dataDevolucao}</td>
+                <td class="ok">
+                    📖 ${emprestimo.status}
+                </td>
+                <td>
+                    <button onclick="devolverLivro(${emprestimo.id})">
+                        Devolvido
+                    </button>
+                </td>
+            `;
+
+            tabela.appendChild(linha);
+        });
+
+    } catch (erro) {
+        console.error("Erro ao carregar empréstimos:", erro);
 
         tabela.innerHTML = `
-
             <tr>
-
                 <td colspan="6">
-
-                    Nenhum livro emprestado no momento.
-
+                    Erro ao carregar os empréstimos.
                 </td>
-
             </tr>
-
         `;
-
-        return;
-
     }
-
-
-    livros.forEach(function (livro) {
-
-        const linha =
-            document.createElement("tr");
-
-
-        linha.innerHTML = `
-
-            <td>
-                ${livro.aluno}
-            </td>
-
-            <td>
-                ${livro.livro}
-            </td>
-
-            <td>
-                ${livro.dataEmprestimo}
-            </td>
-
-            <td>
-                ${livro.dataDevolucao}
-            </td>
-
-            <td class="ok">
-                📖 Emprestado
-            </td>
-
-            <td>
-
-                <button
-                    onclick="devolverLivro(${livro.id})"
-                >
-                    Devolvido
-                </button>
-
-            </td>
-
-        `;
-
-
-        tabela.appendChild(linha);
-
-    });
-
 });
-
 </script>
 
 </body>
