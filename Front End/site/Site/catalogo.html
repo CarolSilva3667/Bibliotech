@@ -1,515 +1,748 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
 <meta charset="UTF-8">
-
 <title>Biblioteca Virtual</title>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-
 <header>
-
 <h1>Biblioteca Virtual 📚</h1>
-
 <nav>
-
     <ul>
-
         <li>
             <a href="index.html">Home</a>
         </li>
-
         <li>
             <a href="destaques.html">Destaques</a>
         </li>
-
         <li>
             <a href="generos.html">Gêneros</a>
         </li>
-
         <li>
             <a href="catalogo.html">Catálogo</a>
         </li>
-
         <li>
             <a href="carrinho.html">Meus Livros</a>
         </li>
-
         <li class="somente-bibliotecario">
             <a href="emprestimos.html">Empréstimos</a>
         </li>
-
         <li>
             <a href="eventos.html">Eventos</a>
         </li>
-
         <li>
             <a href="contato.html">Contato</a>
         </li>
-
         <li>
             <a href="login.html">Login</a>
         </li>
-
         <li class="somente-bibliotecario">
-
             <a href="bibliotecario.html">
                 Painel do Bibliotecário
             </a>
-
         </li>
-
     </ul>
-
 </nav>
-
 </header>
 
 <section id="catalogo">
 <div class="container">
-
     <h2>Catálogo de Livros</h2>
-
-
     <div class="pesquisa">
-
         <input
             type="text"
             id="campoBusca"
             placeholder="Buscar livro, autor ou gênero..."
         >
-
         <button type="button">
             🔍 Buscar
         </button>
-
     </div>
 
-
     <div class="cards" id="listaLivros">
-
-
         <div class="card" data-id="1" data-genero="fantasia">
-
             <img src="./assets/Livro 1.jpg">
-
             <h3>Assistente do Vilão</h3>
-
             <p>
                 Evie Sage se torna assistente do temido Vilão.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
         <div class="card" data-id="2" data-genero="fantasia">
-
             <img src="./assets/Livro 2.jpg">
-
             <h3>Aprendiz do Vilão</h3>
-
             <p>
                 Evie precisa proteger o reino.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
         <div class="card" data-id="3" data-genero="fantasia">
-
             <img src="./assets/Livro 6.jpg">
-
             <h3>Aliada do Vilão</h3>
-
             <p>
                 Novos desafios aguardam Evie.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
         <div class="card" data-id="4" data-genero="fantasia">
+            <img src="./assets/Livro 26.jpg">
+            <h3>Adversária do Vilão</h3>
+            <p>
+            Evie precisa descobrir seu verdadeiro papel 
+            em uma perigosa profecia enquanto se aproxima cada vez mais do Vilão.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
 
+        <div class="card" data-id="5" data-genero="fantasia">
             <img src="./assets/Livro 3.jpg">
-
             <h3>Quarta Asa</h3>
-
             <p>
                 Violet entra na academia de dragões.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="5" data-genero="fantasia">
-
+        <div class="card" data-id="6" data-genero="fantasia">
             <img src="./assets/Livro 5.jpg">
-
             <h3>Chama de Ferro</h3>
-
             <p>
                 Segredos do instituto são revelados.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="6" data-genero="fantasia">
-
+        <div class="card" data-id="7" data-genero="fantasia">
             <img src="./assets/Livro 7.jpg">
-
             <h3>Tempestade de Ônix</h3>
-
             <p>
                 Violet busca aliados fora de Navarre.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-        <div class="card" data-id="7" data-genero="suspense">
-
+        <div class="card" data-id="8" data-genero="suspense">
             <img src="./assets/Livro 4.jpg">
-
             <h3>A Paciente Silenciosa</h3>
-
             <p>
                 Um crime muda completamente uma família.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-        <div class="card" data-id="8" data-genero="romance">
-
+        <div class="card" data-id="9" data-genero="romance">
             <img src="./assets/Livro 8.jpg">
-
             <h3>O Fabricante de Lágrimas</h3>
-
             <p>
                 Dois jovens descobrem sentimentos inesperados.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-        <div class="card" data-id="9" data-genero="suspense">
-
+        <div class="card" data-id="10" data-genero="suspense">
             <img src="./assets/Livro 9.jpg">
-
             <h3>Como Matei Minha Querida Família</h3>
-
             <p>
                 Uma jovem busca vingança.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-        <div class="card" data-id="10" data-genero="romance">
-
+        <div class="card" data-id="11" data-genero="romance">
             <img src="./assets/Livro 10.jpg">
-
             <h3>Quebrando o Gelo</h3>
-
             <p>
                 Um romance entre atletas.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
-
-        <div class="card" data-id="11" data-genero="suspense">
-
+        
+        <div class="card" data-id="12" data-genero="suspense">
             <img src="./assets/Livro 11.jpg">
-
             <h3>Academia dos Casos Arquivados</h3>
-
             <p>
                 Jovens ajudam o FBI a resolver crimes antigos.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="12" data-genero="suspense">
-
+        <div class="card" data-id="13" data-genero="suspense">
             <img src="./assets/Livro 12.jpg">
-
             <h3>Instinto Assassino</h3>
-
             <p>
                 Um assassino copia crimes antigos.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="13" data-genero="suspense">
-
+        <div class="card" data-id="14" data-genero="suspense">
             <img src="./assets/Livro 13.jpg">
-
             <h3>Tudo ou Nada</h3>
-
             <p>
                 Os Naturais enfrentam novos perigos.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="14" data-genero="suspense">
-
+        <div class="card" data-id="15" data-genero="suspense">
             <img src="./assets/Livro 14.jpg">
-
             <h3>Conflitos de Sangue</h3>
-
             <p>
                 Segredos do passado vêm à tona.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-        <div class="card" data-id="15" data-genero="romance">
-
+        <div class="card" data-id="16" data-genero="romance">
             <img src="./assets/Livro 15.jpg">
-
             <h3>A Cinco Passos de Você</h3>
-
             <p>
                 Dois jovens vivem um amor impossível.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-        <div class="card" data-id="16" data-genero="suspense">
-
+        <div class="card" data-id="17" data-genero="suspense">
             <img src="./assets/Livro 16.jpg">
-
             <h3>Casamento Perfeito</h3>
-
             <p>
                 Uma advogada defende seu marido acusado.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="17" data-genero="suspense">
-
+        <div class="card" data-id="18" data-genero="suspense">
             <img src="./assets/Livro 17.jpg">
-
             <h3>O Jardim das Borboletas</h3>
-
             <p>
                 Uma jovem revela segredos de um cativeiro.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="18" data-genero="suspense">
-
+        <div class="card" data-id="19" data-genero="suspense">
             <img src="./assets/Livro 18.jpg">
-
             <h3>Boas Garotas se Afogam em Silêncio</h3>
-
             <p>
                 Uma investigação revela segredos da escola.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
-
-        <div class="card" data-id="19" data-genero="suspense">
-
+        <div class="card" data-id="20" data-genero="suspense">
             <img src="./assets/Livro 19.jpg">
-
             <h3>Ninguém Vai te Ouvir Gritar</h3>
-
             <p>
                 Uma jovem tenta desvendar um desaparecimento.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
 
         </div>
 
-
-        <div class="card" data-id="20" data-genero="suspense">
-
+        <div class="card" data-id="21" data-genero="suspense">
             <img src="./assets/Livro 20.jpg">
-
             <h3>Garotos Mortos Não Sangram</h3>
-
             <p>
                 Adolescentes envolvidos em um mistério sombrio.
             </p>
-
             <p class="status-livro">
                 <strong>Status:</strong> 🟢 Disponível
             </p>
-
             <button class="btn-emprestar">
                 Emprestar
             </button>
-
         </div>
 
+        <div class="card" data-id="22" data-genero="suspense">
+            <img src="./assets/Livro 21.jpg">
+            <h3>O Acidente</h3>
+            <p>
+                Um acidente revela segredos que deveriam permanecer escondidos.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="23" data-genero="suspense">
+            <img src="./assets/Livro 22.jpg">
+            <h3>Com Amor, Mamãe</h3>
+            <p>
+                Uma mãe recebe mensagens misteriosas que escondem um segredo sombrio.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="24" data-genero="dark-romance">
+            <img src="./assets/Livro 25.jpg">
+            <h3>Cutelo & Corvo</h3>
+            <p>
+                Um romance sombrio entre assassinos, perigo e atração irresistível.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="25" data-genero="fantasia">
+            <img src="./assets/Livro 23.jpg">
+            <h3>A Rainha Vermelha</h3>
+            <p>
+                Uma jovem de sangue vermelho descobre um poder capaz de mudar o reino.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="26" data-genero="dark-romance">
+            <img src="./assets/Livro 24.jpg">
+            <h3>Assombrando Adeline</h3>
+            <p>
+                Uma escritora é perseguida por um homem misterioso e perigoso.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="27" data-genero="dark-romance">
+            <img src="./assets/Livro 27.jpg">
+            <h3>Couro & Rouxinol</h3>
+            <p>
+                Um romance sombrio marcado por perigo, obsessão e desejo.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="28" data-genero="dark-romance">
+            <img src="./assets/Livro 28.jpg">
+            <h3>Foice & Pardal</h3>
+            <p>
+                Uma história de amor perigosa entre duas pessoas nada convencionais.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="29" data-genero="dark-romance">
+            <img src="./assets/Livro 29.jpg">
+            <h3>Perseguindo Adeline</h3>
+            <p>
+                Adeline tenta escapar enquanto seu perseguidor continua atrás dela.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
 
+        <div class="card" data-id="30" data-genero="romance">
+            <img src="./assets/Livro 30.jpg">
+            <h3>A Hipótese do Amor</h3>
+            <p>
+                Uma mentira sobre um namoro acaba se transformando em algo inesperado.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="31" data-genero="romance">
+            <img src="./assets/Livro 31.jpg">
+            <h3>O Acordo</h3>
+            <p>
+                Um namoro de mentira aproxima dois universitários de formas inesperadas.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="32" data-genero="romance">
+            <img src="./assets/Livro 32.jpg">
+            <h3>O Erro</h3>
+            <p>
+                Uma noite inesperada coloca Logan e Grace em uma situação complicada.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="33" data-genero="romance">
+            <img src="./assets/Livro 33.jpg">
+            <h3>O Jogo</h3>
+            <p>
+                Um jogador de hóquei se envolve em um romance que não estava nos planos.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="34" data-genero="romance">
+            <img src="./assets/Livro 34.jpg">
+            <h3>A Conquista</h3>
+            <p>
+                Um novo romance surge enquanto os jogadores enfrentam desafios pessoais.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="35" data-genero="romance">
+            <img src="./assets/Livro 35.jpg">
+            <h3>O Legado</h3>
+            <p>
+                Novos desafios e romances marcam o fim da história dos jogadores.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+
+        <div class="card" data-id="36" data-genero="fantasia">
+            <img src="./assets/Frank.jpg">
+            <h3>Frankenstein</h3>
+            <p>
+                Um cientista cria uma criatura que acaba fugindo de seu controle.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="37" data-genero="fantasia">
+            <img src="./assets/Drac.jpg">
+            <h3>Drácula</h3>
+            <p>
+                Um jovem advogado enfrenta o misterioso e assustador Conde Drácula.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="38" data-genero="suspense">
+            <img src="./assets/desenhos.jpg">
+            <h3>Desenhos Ocultos</h3>
+            <p>
+                Uma babá encontra desenhos perturbadores que escondem um segredo.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+
+        <div class="card" data-id="39" data-genero="romance">
+            <img src="./assets/Livro 36.jpg">
+            <h3>Amizade em Colapso</h3>
+            <p>
+                Uma amizade é colocada à prova quando sentimentos, segredos e conflitos começam a mudar tudo entre elas.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="40" data-genero="romance">
+            <img src="./assets/Livro 37.jpg">
+            <h3>Um Amor Problemático de Verão</h3>
+            <p>
+                Uma jovem se envolve em um romance inesperado durante o verão, enfrentando sentimentos que não estavam nos seus
+                planos.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="41" data-genero="romance">
+            <img src="./assets/Livro 38.jpg">
+            <h3>Vergonha</h3>
+            <p>
+                Uma mulher marcada pelo passado encontra uma nova chance de recomeçar e descobrir o amor.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="42" data-genero="suspense">
+            <img src="./assets/Livro 39.jpg">
+            <h3>Jantar Secreto</h3>
+            <p>
+                Quatro amigos se mudam para o Rio de Janeiro e passam a organizar jantares secretos que escondem consequências
+                perigosas.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="43" data-genero="suspense">
+            <img src="./assets/Livro 40.jpg">
+            <h3>Saboroso Cadáver</h3>
+            <p>
+                Em um mundo onde a carne humana foi legalizada, um homem trabalha em uma indústria que transforma vidas em
+                alimento.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="44" data-genero="fantasia">
+            <img src="./assets/Livro 41.jpg">
+            <h3>O Livro de Azrael</h3>
+            <p>
+                Uma guerreira marcada por um passado sombrio precisa enfrentar poderes sobrenaturais e uma ameaça capaz de
+                destruir o mundo.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="45" data-genero="fantasia">
+            <img src="./assets/Livro 42.jpg">
+            <h3>Asas Reluzentes</h3>
+            <p>
+                Uma jovem enfrenta um mundo de magia, criaturas fantásticas e sentimentos inesperados enquanto busca seu próprio
+                caminho.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="46" data-genero="dark-romance">
+            <img src="./assets/Livro 43.jpg">
+            <h3>Love in the Dark</h3>
+            <p>
+                Um romance intenso se desenvolve em meio a segredos, inseguranças e sentimentos difíceis de esconder.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="47" data-genero="dark-romance">
+            <img src="./assets/Livro 44.jpg">
+            <h3>Retalhos</h3>
+            <p>
+                Entre lembranças, dores e recomeços, uma história sobre pessoas tentando reconstruir suas vidas a partir dos
+                próprios pedaços.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
+        
+        <div class="card" data-id="48" data-genero="dark-romance">
+            <img src="./assets/Livro 45.jpg">
+            <h3>Sangue e Promessa</h3>
+            <p>
+                Uma promessa selada pelo sangue coloca seus protagonistas diante de perigos, escolhas difíceis e sentimentos
+                proibidos.
+            </p>
+            <p class="status-livro">
+                <strong>Status:</strong> 🟢 Disponível
+            </p>
+            <button class="btn-emprestar">
+                Emprestar
+            </button>
+        </div>
     </div>
-
 </div>
 
 </section>
@@ -1010,4 +1243,3 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
-
